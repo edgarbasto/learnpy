@@ -13,7 +13,7 @@ def scramble_files():
     for file_name in file_list:
         print("Old Name - "+file_name)
         indexSplit = random.randrange(len(file_name))
-        oldFileName = file_name.strip('.jpg')
+        oldFileName = file_name[:-4]
         newFileName = str(random.randint(0,999999)) + oldFileName[:indexSplit] + str(random.randint(0,999999)) + oldFileName[indexSplit:] + str('.jpg')
         print("New Name - "+ newFileName)
         if file_name != '__MACOSX':
